@@ -1,0 +1,854 @@
+activity_alterar_dados.xml
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ConsultaDadosActivity" >
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#3ba0e2" >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/icone_alterar_dados" />
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            />
+        <LinearLayout
+            android:id="@+id/layoutCorFundo"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:background="#edb068"
+            android:gravity="center" >
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/alterar_dados"
+                android:textAppearance=
+                    "?android:attr/textAppearanceLarge"
+                android:textColor="#ffffff" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        tools:text="@string/nome" />
+
+    <EditText
+        android:id="@+id/txtnome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/digite_seu_nome"
+        android:importantForAutofill="no"
+        android:inputType="text" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        tools:text="@string/telefone" />
+
+    <EditText
+        android:id="@+id/txttelefone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/digite_seu_telefone"
+        android:importantForAutofill="no"
+        android:inputType="text">
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        tools:text="@string/e_mail" />
+
+    <EditText
+        android:id="@+id/txtemail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/digite_seu_email"
+        android:importantForAutofill="no"
+        android:inputType="text|textEmailAddress" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="0dp" >
+
+        <ImageView
+            android:id="@+id/imgprimeiro"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:contentDescription="@string/todo"
+            android:scaleType="fitXY"
+            android:src="@drawable/botao_alt_primeiro" />
+
+        <ImageView
+            android:id="@+id/imganterior"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:contentDescription="@string/todo"
+            android:scaleType="fitXY"
+            android:src="@drawable/botao_alt_anterior" />
+
+        <ImageView
+            android:id="@+id/imgproximo"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:contentDescription="@string/todo"
+            android:scaleType="fitXY"
+            android:src="@drawable/botao_alt_proximo" />
+
+        <ImageView
+            android:id="@+id/imgultimo"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:contentDescription="@string/todo"
+            android:scaleType="fitXY"
+            android:src="@drawable/botao_alt_ultimo" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="0dp" >
+
+        <TextView
+            android:id="@+id/txtstatus_registro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/status"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center" >
+        <Button
+            android:id="@+id/btalterardados"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/alterar_dados" />
+    </LinearLayout>
+</LinearLayout>
+
+
+NOVO strings.xml
+
+<resources>
+    <string name="app_name">AplicacaoBancoDeDados</string>
+    <string name="trabalhando_com_banco_de_dados_no_android">Trabalhando com Banco de Dados no Android</string>
+    <string name="escolha_uma_das_op_es_abaixo">Escolha uma das opções abaixo:</string>
+    <string name="criar_banco_de_dados">Criar Banco de Dados</string>
+    <string name="todo">TODO</string>
+    <string name="cadastrar">Cadastrar</string>
+    <string name="e_mail">E-Mail:</string>
+    <string name="cadastro_de_usu_rio">Cadastro de Usuário</string>
+    <string name="telefone">Telefone:</string>
+    <string name="nome">Nome:</string>
+    <string name="esta_aplica_o_ir_registrar_as_informa_es_do_usu_rio_no_banco_de_dados">Esta aplicação irá registrar as informações do usuário no Banco de Dados.</string>
+    <string name="digite_seu_nome">Digite seu nome</string>
+    <string name="digite_seu_telefone">Digite seu telefone</string>
+    <string name="digite_seu_email">Digite seu email</string>
+    <string name="cadastrar_dados">Cadastrar Dados</string>
+    <string name="cadastrar_dados2">Cadastrar Dados (2ª Edição)</string>
+    <string name="status">#status</string>
+    <string name="consultar_dados">Consultar Dados</string>
+    <string name="nomeConsulta">[Nome]</string>
+    <string name="telefoneConsulta">[Telefone]</string>
+    <string name="emailConsulta">[E-Mail]</string>
+    <string name="alterar_dados">Alterar Dados</string>
+    <string name="nomeAltera">[Nome]</string>
+    <string name="telefoneAltera">[Telefone]</string>
+    <string name="emailAltera">[E-Mail]</string>
+</resources>
+
+
+AlterarDadosActivity.java
+
+package com.example.aplicacaobancodedados;
+
+import android.os.Bundle;
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+public class AlterarDadosActivity extends Activity {
+    EditText txtnome, txttelefone, txtemail;
+    TextView txtstatus_registro;
+    SQLiteDatabase db;
+    ImageView imgprimeiro, imganterior, imgproximo, imgultimo;
+    Button btalterardados;
+    int indice;
+    int numreg;
+    Cursor c;
+    DialogInterface.OnClickListener diAlteraInformacoes;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_alterar_dados);
+        txtnome = (EditText) findViewById(R.id.txtnome);
+        txttelefone = (EditText) findViewById(R.id.txttelefone);
+        txtemail = (EditText) findViewById(R.id.txtemail);
+        txtstatus_registro = (TextView) findViewById(R.id.txtstatus_registro);
+        imgprimeiro = (ImageView) findViewById(R.id.imgprimeiro);
+        imganterior = (ImageView) findViewById(R.id.imganterior);
+        imgproximo = (ImageView) findViewById(R.id.imgproximo);
+        imgultimo = (ImageView) findViewById(R.id.imgultimo);
+        btalterardados = (Button)findViewById(R.id.btalterardados);
+        try {
+            //Abre o banco de dados
+            db = openOrCreateDatabase("banco_dados",
+                    Context.MODE_PRIVATE, null);
+            c = db.query("usuarios",new String []
+                            {"numreg","nome","telefone","email"},
+                    null,null,null,null,null);
+            if(c.getCount() > 0) { //Move para o primeiro registro
+                c.moveToFirst();
+                indice = 1;
+                numreg = c.getInt(0); //Obtem o número de registro
+                txtnome.setText(c.getString(1)); //Obtem o nome
+                txttelefone.setText(c.getString(2)); //Obtém o telefone
+                txtemail.setText(c.getString(3));//Obtém o e-mail
+                txtstatus_registro.setText(indice + " / " +
+                        c.getCount());
+            }
+            else {
+                txtstatus_registro.setText("Nenhum Registro");
+            }
+        }
+        catch(Exception e){
+        }
+
+        imgprimeiro.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(c.getCount() > 0)    {
+                    //Move para o primeiro registro
+                    c.moveToFirst();
+                    indice = 1;
+                    //Obtem o número de registro
+                    numreg = c.getInt(0);
+                    //Obtem o nome
+                    txtnome.setText(c.getString(1));
+                    //Obtém o telefone
+                    txttelefone.setText(c.getString(2));
+                    //Obtém o e-mail
+                    txtemail.setText(c.getString(3));
+                    txtstatus_registro.setText(indice + " / " +
+                            c.getCount());
+                }
+            }
+        });
+
+        imganterior.setOnClickListener(new View.OnClickListener() {
+            @Override   public void onClick(View v) {
+                // TODO Auto-generated method stub
+                if(c.getCount() > 0)    {
+                    if(indice > 1) {
+                        indice--;
+                        //Move para o registro anterior
+                        c.moveToPrevious();
+                        numreg = c.getInt(0);
+                        //Obtem o número de registro
+                        txtnome.setText(c.getString(1));
+                        //Obtem o nome
+                        txttelefone.setText(c.getString(2));
+                        //Obtém o telefone
+                        txtemail.setText(c.getString(3));
+                        //Obtém o e-mail
+                        txtstatus_registro.setText(indice + " / " +
+                                c.getCount());
+                    }
+                }
+            }
+        });
+
+        imgproximo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+                if(c.getCount() > 0)     {
+                    if(indice != c.getCount()) {
+                        indice++;
+                        //Move para o proximo registro
+                        c.moveToNext();
+                        numreg = c.getInt(0); //Obtem o número de registro
+                        txtnome.setText(c.getString(1));
+                        //Obtem o nome
+                        txttelefone.setText(c.getString(2));
+                        //Obtém o telefone
+                        //Obtém o e-mail
+                        txtemail.setText(c.getString(3));
+                        txtstatus_registro.setText(indice + " / " +
+                                c.getCount());
+                    }
+                }
+            }
+        });
+
+        imgultimo.setOnClickListener(new View.OnClickListener() {
+            @Override  public void onClick(View v) {
+                if(c.getCount() > 0)   {
+                    //Move para o último registro
+                    c.moveToLast();
+                    indice = c.getCount();
+                    numreg = c.getInt(0); //Obtem o número de registro
+                    txtnome.setText(c.getString(1));//Obtem o nome
+                    txttelefone.setText(c.getString(2));//Obtém o
+                    //telefone
+                    txtemail.setText(c.getString(3));//Obtém o e-mail
+                    txtstatus_registro.setText(indice + " / " +
+                            c.getCount());   }  }    });
+
+        diAlteraInformacoes = new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                //Altera as informações do registro na tabela
+                String nome = txtnome.getText().toString();
+                String telefone = txttelefone.getText().toString();
+                String email = txtemail.getText().toString();
+
+                try {
+                    db.execSQL("update usuarios set nome = '" + nome + "', "
+                            + "telefone = '" + telefone + "', email = '" + email +
+                            "' where numreg = " + numreg);
+                    MostraMensagem("Dados alterados com sucesso.");
+                }   catch(Exception e) {
+                    MostraMensagem("Erro: " + e.toString());
+                }
+            }
+        };
+
+        btalterardados.setOnClickListener(new View.OnClickListener() {
+            @Override  public void onClick(View v) {
+                AlertDialog.Builder dialogo = new
+                        AlertDialog.Builder(AlterarDadosActivity.this);
+                dialogo.setTitle("Confirma");
+                dialogo.setMessage("Deseja alterar as informações");
+                dialogo.setNegativeButton("Não", null);
+                dialogo.setPositiveButton("Sim", diAlteraInformacoes);
+                dialogo.show();
+            }
+        });
+    }
+    public void MostraMensagem(String str)  {
+        AlertDialog.Builder dialogo = new
+                AlertDialog.Builder(AlterarDadosActivity.this);
+        dialogo.setTitle("Aviso");
+        dialogo.setMessage(str);
+        dialogo.setNeutralButton("OK", null);
+        dialogo.show();
+    }
+}
+
+
+MainActivity.java
+
+acrescentar:
+
+    Button btalterardados;
+	
+	    btalterardados = findViewById(R.id.btalterardados);
+
+        btalterardados.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View args0){
+                Intent alterarDadosActivity = new Intent (MainActivity.this,
+                        AlterarDadosActivity.class);
+                MainActivity.this.startActivity(alterarDadosActivity);
+            }
+        });
+
+		
+		
+activity_alterar_dados2.xml
+
+mesmo código do activity_alterar_dados.xml
+
+AlterarDados2Activity.java
+
+import android.os.Bundle;
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.ContentValues;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+public class AlterarDados2Activity extends Activity {
+    EditText txtnome, txttelefone, txtemail;
+    TextView txtstatus_registro;
+    SQLiteDatabase db;
+    ImageView imgprimeiro, imganterior, imgproximo, imgultimo;
+    Button btalterardados;
+    int indice;
+    int numreg;
+    Cursor c;
+    DialogInterface.OnClickListener diAlteraInformacoes;
+
+    @Override  protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_alterar_dados);
+        txtnome = (EditText) findViewById(R.id.txtnome);
+        txttelefone = (EditText) findViewById(R.id.txttelefone);
+        txtemail = (EditText) findViewById(R.id.txtemail);
+        txtstatus_registro = (TextView) findViewById(R.id.txtstatus_registro);
+        imgprimeiro = (ImageView) findViewById(R.id.imgprimeiro);
+        imganterior = (ImageView) findViewById(R.id.imganterior);
+        imgproximo = (ImageView) findViewById(R.id.imgproximo);
+
+        imgultimo = (ImageView) findViewById(R.id.imgultimo);
+        btalterardados = (Button)
+                findViewById(R.id.btalterardados);
+        try {
+            //Abre o banco de dados   
+            db = openOrCreateDatabase
+                    ("banco_dados",Context.MODE_PRIVATE, null);
+            c = db.query("usuarios",new String []
+                            {"numreg","nome","telefone","email"},
+                    null,null,null,null,null);
+            if(c.getCount() > 0) {
+                //Move para o primeiro registro     
+                c.moveToFirst();
+                indice = 1;
+                numreg = c.getInt(0);
+                //Obtem o número de registro    
+                txtnome.setText(c.getString(1));//Obtem o nome  
+                //Obtém o telefone  		  
+                txttelefone.setText(c.getString(2));
+                //Obtém o e-mail 
+                txtemail.setText(c.getString(3));
+
+                txtstatus_registro.setText(indice + " / " +
+                        c.getCount());
+
+            }
+            else {
+                txtstatus_registro.setText("Nenhum Registro");
+            }
+        }
+        catch(Exception e)
+        {
+        }
+        imgprimeiro.setOnClickListener(new View.OnClickListener() {
+            @Override   public void onClick(View v) {
+                if(c.getCount() > 0)      {
+                    //Move para o primeiro registro  
+                    c.moveToFirst();
+                    indice = 1;
+                    //Obtem o número de registro  
+                    numreg = c.getInt(0);
+
+                    //Obtem o nome 
+                    txtnome.setText(c.getString(1));
+                    //Obtém o telefone 
+                    txttelefone.setText(c.getString(2));
+                    //Obtém o e-mail  
+                    txtemail.setText(c.getString(3));
+                    txtstatus_registro.setText(indice + " / " +
+                            c.getCount());
+
+                }
+            }
+        });
+        imganterior.setOnClickListener(new View.OnClickListener() {
+            @Override     public void onClick(View v) {
+                // TODO Auto-generated method stub  
+                if(c.getCount() > 0)    {
+                    if(indice > 1) {
+                        indice--;
+                        //Move para o registro anterior  
+                        c.moveToPrevious();
+                        numreg = c.getInt(0);
+                        //Obtem o número de registro   
+                        //Obtem o nome    
+                        txtnome.setText(c.getString(1));
+                        //Obtém o telefone  
+                        txttelefone.setText(c.getString(2));
+                        //Obtém o e-mail   
+                        txtemail.setText(c.getString(3));
+                        txtstatus_registro.setText(indice + " / " +
+                                c.getCount());
+                    }
+                }
+            }
+        });
+        imgproximo.setOnClickListener(new View.OnClickListener() {
+            @Override    public void onClick(View v) {
+                // TODO Auto-generated method stub 
+                if(c.getCount() > 0)        {
+                    if(indice != c.getCount()) {
+
+                        indice++;
+                        //Move para o proximo registro
+                        c.moveToNext();
+                        //Obtem o número de registro 
+                        numreg = c.getInt(0);
+                        txtnome.setText(c.getString(1));//Obtem o nome 
+                        //Obtém o telefone  
+                        txttelefone.setText(c.getString(2));
+                        //Obtém o e-mail   
+                        txtemail.setText(c.getString(3));
+                        txtstatus_registro.setText(indice + " / " +
+                                c.getCount());
+                    }
+                }
+            }
+        });
+        imgultimo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(c.getCount() > 0)      {
+                    //Move para o último registro 
+                    c.moveToLast();
+                    indice = c.getCount();
+                    numreg = c.getInt(0); //Obtem o número de registro
+                    txtnome.setText(c.getString(1));//Obtem o nome 
+                    //Obtém o telefone   
+                    txttelefone.setText(c.getString(2));
+                    txtemail.setText(c.getString(3));//Obtém o e-mail 
+                    txtstatus_registro.setText(indice + " / " +
+                            c.getCount());
+                }
+            }
+        });
+        diAlteraInformacoes = new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                //Altera as informações do registro na tabela  
+                String nome = txtnome.getText().toString();
+                String telefone = txttelefone.getText().toString();
+                String email = txtemail.getText().toString();
+
+                try {
+                    ContentValues valor = new ContentValues();
+                    valor.put("nome", nome);
+                    valor.put("telefone", telefone);
+                    valor.put("email", email);
+                    db.update("usuarios", valor, "numreg=" + numreg, null);
+                    MostraMensagem("Dados alterados com sucesso.");
+                }
+                catch(Exception e)    {
+                    MostraMensagem("Erro: " + e.toString());
+                }
+            }
+        };
+        btalterardados.setOnClickListener(new View.OnClickListener() {
+            @Override   public void onClick(View v) {
+                AlertDialog.Builder dialogo = new
+                        AlertDialog.Builder(AlterarDados2Activity.this);
+                dialogo.setTitle("Confirma");
+                dialogo.setMessage("Deseja alterar as informações ?");
+                dialogo.setNegativeButton("Não", null);
+                dialogo.setPositiveButton("Sim",
+                        diAlteraInformacoes);
+                dialogo.show();
+            }
+        }) ;
+    }
+    public void MostraMensagem(String str)    {
+        AlertDialog.Builder dialogo = new
+                AlertDialog.Builder(AlterarDados2Activity.this);
+        dialogo.setTitle("Aviso");
+        dialogo.setMessage(str);
+        dialogo.setNeutralButton("OK", null);
+        dialogo.show();
+    }
+}  
+
+
+(activity_main.xml) layout antigo:
+
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#3ba0e2" >
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:src="@drawable/icone_bd"
+            android:contentDescription="@string/todo" />
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            />
+
+        <LinearLayout
+            android:id="@+id/layoutCorFundo"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:background="#E5BE40"
+            android:gravity="center" >
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/trabalhando_com_banco_de_dados_no_android"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#ffffff" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutImagemFundo"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/escolha_uma_das_op_es_abaixo"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/btcriarbanco"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="@string/criar_banco_de_dados" />
+            <Button
+                android:id="@+id/btcadastrardados"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="@string/cadastrar_dados" />
+            <Button
+                android:id="@+id/btcadastrardados2"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="@string/cadastrar_dados2" />
+            <Button
+                android:id="@+id/btconsultardados"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="@string/consultar_dados" />
+
+            <Button
+                android:id="@+id/btalterardados"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="@string/alterar_dados" />
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
+
+
+(activity_main.xml)layout novo:
+
+<?xml version="1.0" encoding="utf-8"?>
+ <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+ android:layout_width="match_parent"  
+ android:layout_height="match_parent" 
+ android:orientation="vertical" >  
+ 
+    <LinearLayout    
+	android:layout_width="match_parent"      
+	android:layout_height="wrap_content"     
+    android:background="#3ba0e2" >  
+	
+        <ImageView        
+		android:id="@+id/imageView1"    
+		android:layout_width="96dp"  
+		android:layout_height="96dp"  
+		android:src="@drawable/icone_bd" /> 
+		
+        <TextView         
+		android:id="@+id/textView1"   
+		android:layout_width="wrap_content"   
+		android:layout_height="wrap_content"   
+		android:textAppearance="?android:attr/textAppearanceLarge" />  
+		
+        <LinearLayout 
+		            android:id="@+id/layoutCorFundo" 
+					android:layout_width="fill_parent" 
+					android:layout_height="match_parent"  
+					android:background="#E5BE40"   
+					android:gravity="center" >  
+					
+            <TextView          
+			android:id="@+id/textView2"         
+			android:layout_width="wrap_content"  
+			android:layout_height="wrap_content"   
+			android:text="Trabalhando com Banco de Dados no	Android"  
+			android:textAppearance="?android:attr/textAppearanceLarge"
+			android:textColor="#ffffff" />   
+			</LinearLayout>  
+			
+    </LinearLayout>  
+    <LinearLayout    
+	android:id="@+id/layoutImagemFundo"  
+	android:layout_width="match_parent"  
+	android:layout_height="fill_parent" 
+	android:orientation="vertical" >  
+	
+        <TextView        
+		android:id="@+id/textView4"   
+		android:layout_width="wrap_content"  
+		android:layout_height="wrap_content"   
+		android:text="Escolha uma das opções abaixo:"
+		android:textAppearance="?android:attr/textAppearanceLarge" 
+		android:textSize="20sp" />  
+		
+        <LinearLayout        
+		android:layout_width="match_parent"  
+		android:layout_height="fill_parent"  
+		android:gravity="center"        
+		android:orientation="vertical" >  
+		
+            <Button           
+			android:id="@+id/btcriarbanco"     
+            android:layout_width="fill_parent"   
+			android:layout_height="wrap_content"   
+			android:text="Criar Banco de Dados"       
+			android:textSize="15sp" />  
+            <LinearLayout           
+			android:layout_width="match_parent"   
+			android:layout_height="wrap_content" >  
+			
+                <LinearLayout         
+				android:layout_width="160dp"     
+                android:layout_height="match_parent"     
+                android:gravity="center"         
+				android:orientation="vertical" > 
+				
+				                    <Button    
+									android:id="@+id/btcadastrardados"  
+									android:layout_width="160dp"     
+									android:layout_height="wrap_content" 
+									android:text="Cadastrar Dados"   
+									android:textSize="15sp" />  
+                    <Button                    
+					android:id="@+id/btcadastrardados2"  
+					android:layout_width="160dp"     
+                    android:layout_height="wrap_content"
+					android:text="Cadastrar Dados (2ª Versão)" 
+					android:textSize="15sp" />  
+					
+                    <Button              
+					android:id="@+id/btconsultardados"  
+					android:layout_width="160dp"   
+					android:layout_height="wrap_content"  
+					android:text="Consultar Dados"  
+					android:textSize="15sp" />  
+					
+                    <Button                    
+					android:id="@+id/btalterardados" 
+					android:layout_width="160dp"   
+					android:layout_height="wrap_content"   
+					android:text="Alterar Dados"  
+					android:textSize="15sp" />    
+					</LinearLayout>  
+                <LinearLayout         
+				android:layout_width="160dp" 
+				android:layout_height="match_parent" 
+				android:gravity="center"    
+				android:orientation="vertical" >  
+				
+                    <Button         
+					android:id="@+id/btalterardados2"  
+					android:layout_width="160dp"  
+					android:layout_height="wrap_content"   
+					android:text="Alterar Dados (2ª Versão)"  
+					android:textSize="15sp" />     
+					</LinearLayout>  
+            </LinearLayout>  
+        </LinearLayout>  
+    </LinearLayout>  
+</LinearLayout> 
+
+Novo STRINGS.XML
+
+<resources>
+    <string name="app_name">AplicacaoBancoDeDados</string>
+    <string name="trabalhando_com_banco_de_dados_no_android">Trabalhando com Banco de Dados no Android</string>
+    <string name="escolha_uma_das_op_es_abaixo">Escolha uma das opções abaixo:</string>
+    <string name="criar_banco_de_dados">Criar Banco de Dados</string>
+    <string name="todo">TODO</string>
+    <string name="cadastrar">Cadastrar</string>
+    <string name="e_mail">E-Mail:</string>
+    <string name="cadastro_de_usu_rio">Cadastro de Usuário</string>
+    <string name="telefone">Telefone:</string>
+    <string name="nome">Nome:</string>
+    <string name="esta_aplica_o_ir_registrar_as_informa_es_do_usu_rio_no_banco_de_dados">Esta aplicação irá registrar as informações do usuário no Banco de Dados.</string>
+    <string name="digite_seu_nome">Digite seu nome</string>
+    <string name="digite_seu_telefone">Digite seu telefone</string>
+    <string name="digite_seu_email">Digite seu email</string>
+    <string name="cadastrar_dados">Cadastrar Dados</string>
+    <string name="cadastrar_dados2">Cadastrar Dados (2ª Edição)</string>
+    <string name="status">#status</string>
+    <string name="consultar_dados">Consultar Dados</string>
+    <string name="nomeConsulta">[Nome]</string>
+    <string name="telefoneConsulta">[Telefone]</string>
+    <string name="emailConsulta">[E-Mail]</string>
+    <string name="alterar_dados">Alterar Dados</string>
+    <string name="alterar_dados2">Alterar Dados (2ª Edição)</string>
+    <string name="nomeAltera">[Nome]</string>
+    <string name="telefoneAltera">[Telefone]</string>
+    <string name="emailAltera">[E-Mail]</string>
+</resources>
+
+
+   

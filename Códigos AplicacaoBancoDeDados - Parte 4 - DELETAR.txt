@@ -1,0 +1,459 @@
+
+activity_excluir_dados.xml
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ExcluirDadosActivity" >
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#3ba0e2" >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/icone_excluir_dados" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            />
+        <LinearLayout
+            android:id="@+id/layoutCorFundo"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:background="#b0b5b3"
+            android:gravity="center" >
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/excluir_dados"
+                android:textAppearance=
+                    "?android:attr/textAppearanceLarge"
+                android:textColor="#ffffff" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        tools:text="@string/nome" />
+
+    <TextView
+        android:id="@+id/txtnome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:text="@string/nomeColchetes"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#777a79"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        tools:text="@string/telefone" />
+
+    <TextView
+        android:id="@+id/txttelefone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:text="@string/telefoneColchetes"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#777a79"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        tools:text="@string/e_mail" />
+
+    <TextView
+        android:id="@+id/txtemail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:text="@string/emailColchetes"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#777a79"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="0dp" >
+
+        <ImageView
+            android:id="@+id/imgprimeiro"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="fitXY"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/botao_del_primeiro" />
+
+        <ImageView
+            android:id="@+id/imganterior"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="fitXY"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/botao_del_anterior" />
+        <ImageView
+            android:id="@+id/imgproximo"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="fitXY"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/botao_del_proximo" />
+        <ImageView
+            android:id="@+id/imgultimo"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="fitXY"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/botao_del_ultimo" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="0dp" >
+
+        <TextView
+            android:id="@+id/txtstatus_registro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            tools:text="@string/status" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center" >
+
+        <Button
+            android:id="@+id/btexcluirdados"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/excluir_dados" />
+
+    </LinearLayout>
+</LinearLayout>		
+
+
+NOVO strings.xml
+
+<resources>
+    <string name="app_name">AplicacaoBancoDeDados</string>
+    <string name="trabalhando_com_banco_de_dados_no_android">Trabalhando com Banco de Dados no Android</string>
+    <string name="escolha_uma_das_op_es_abaixo">Escolha uma das opções abaixo:</string>
+    <string name="criar_banco_de_dados">Criar Banco de Dados</string>
+    <string name="todo">TODO</string>
+    <string name="cadastrar">Cadastrar</string>
+    <string name="e_mail">E-Mail:</string>
+    <string name="cadastro_de_usu_rio">Cadastro de Usuário</string>
+    <string name="telefone">Telefone:</string>
+    <string name="nome">Nome:</string>
+    <string name="esta_aplica_o_ir_registrar_as_informa_es_do_usu_rio_no_banco_de_dados">Esta aplicação irá registrar as informações do usuário no Banco de Dados.</string>
+    <string name="digite_seu_nome">Digite seu nome</string>
+    <string name="digite_seu_telefone">Digite seu telefone</string>
+    <string name="digite_seu_email">Digite seu email</string>
+    <string name="cadastrar_dados">Cadastrar Dados</string>
+    <string name="cadastrar_dados2">Cadastrar Dados (2ª Edição)</string>
+    <string name="status">#status</string>
+    <string name="consultar_dados">Consultar Dados</string>
+    <string name="nomeConsulta">[Nome]</string>
+    <string name="telefoneConsulta">[Telefone]</string>
+    <string name="emailConsulta">[E-Mail]</string>
+    <string name="alterar_dados">Alterar Dados</string>
+    <string name="alterar_dados2">Alterar Dados (2ª Edição)</string>
+    <string name="nomeAltera">[Nome]</string>
+    <string name="telefoneAltera">[Telefone]</string>
+    <string name="emailAltera">[E-Mail]</string>
+    <string name="excluir_dados">Excluir Dados</string>
+    <string name="nomeColchetes">[Nome]</string>
+    <string name="telefoneColchetes">[Telefone]</string>
+    <string name="emailColchetes">[EMail]</string>
+</resources>
+
+
+ExcluirDadosActivity.java
+
+package com.example.aplicacaobancodedados;
+
+import android.os.Bundle;
+import android.app.Activity;
+import android.app.AlertDialog;
+//import android.content.ContentValues;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+public class ExcluirDadosActivity extends Activity {
+    TextView txtnome, txttelefone, txtemail, txtstatus_registro;
+    SQLiteDatabase db;
+    ImageView imgprimeiro, imganterior, imgproximo, imgultimo;
+    Button btexcluirdados;
+    int indice;
+    int numreg;
+    Cursor c;
+    DialogInterface.OnClickListener diExcluiRegistro;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_excluir_dados);
+        txtnome = (TextView) findViewById(R.id.txtnome);
+        txttelefone = (TextView) findViewById(R.id.txttelefone);
+        txtemail = (TextView) findViewById(R.id.txtemail);
+        txtstatus_registro = (TextView) findViewById(R.id.txtstatus_registro);
+
+        txtnome.setText("");
+        txttelefone.setText("");
+        txtemail.setText("");
+
+        imgprimeiro = (ImageView) findViewById(R.id.imgprimeiro);
+        imganterior = (ImageView) findViewById(R.id.imganterior);
+        imgproximo = (ImageView) findViewById(R.id.imgproximo);
+
+        imgultimo = (ImageView) findViewById(R.id.imgultimo);
+        btexcluirdados = (Button) findViewById(R.id.btexcluirdados);
+
+        try {
+        //Abre o banco de dados
+        db = openOrCreateDatabase("banco_dados",Context.MODE_PRIVATE, null);
+        CarregaDados();
+
+        imgprimeiro.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(c.getCount() > 0)      {
+                    //Move para o primeiro registro
+                    c.moveToFirst();
+                    indice = 1;
+                    //Obtem o número de registro
+                    numreg = c.getInt(0);
+
+                    //Obtem o nome
+                    txtnome.setText(c.getString(1));
+                    //Obtém o telefone
+                    txttelefone.setText(c.getString(2));
+                    //Obtém o e-mail
+                    txtemail.setText(c.getString(3));
+                    txtstatus_registro.setText(indice + " / " +
+                            c.getCount());
+
+                }
+            }
+        });
+        imganterior.setOnClickListener(new View.OnClickListener() {
+            @Override     public void onClick(View v) {
+                // TODO Auto-generated method stub
+                if(c.getCount() > 0)    {
+                    if(indice > 1) {
+                        indice--;
+                        //Move para o registro anterior
+                        c.moveToPrevious();
+                        numreg = c.getInt(0);
+                        //Obtem o número de registro
+                        //Obtem o nome
+                        txtnome.setText(c.getString(1));
+                        //Obtém o telefone
+                        txttelefone.setText(c.getString(2));
+                        //Obtém o e-mail
+                        txtemail.setText(c.getString(3));
+                        txtstatus_registro.setText(indice + " / " +
+                                c.getCount());
+                    }
+                }
+            }
+        });
+        imgproximo.setOnClickListener(new View.OnClickListener() {
+            @Override    public void onClick(View v) {
+                // TODO Auto-generated method stub
+                if(c.getCount() > 0)        {
+                    if(indice != c.getCount()) {
+
+                        indice++;
+                        //Move para o proximo registro
+                        c.moveToNext();
+                        //Obtem o número de registro
+                        numreg = c.getInt(0);
+                        txtnome.setText(c.getString(1));//Obtem o nome
+                        //Obtém o telefone
+                        txttelefone.setText(c.getString(2));
+                        //Obtém o e-mail
+                        txtemail.setText(c.getString(3));
+                        txtstatus_registro.setText(indice + " / " +
+                                c.getCount());
+                    }
+                }
+            }
+        });
+        imgultimo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(c.getCount() > 0)      {
+                    //Move para o último registro
+                    c.moveToLast();
+                    indice = c.getCount();
+                    numreg = c.getInt(0); //Obtem o número de registro
+                    txtnome.setText(c.getString(1));//Obtem o nome
+                    //Obtém o telefone
+                    txttelefone.setText(c.getString(2));
+                    txtemail.setText(c.getString(3));//Obtém o e-mail
+                    txtstatus_registro.setText(indice + " / " + c.getCount());
+                }
+            }
+        });
+
+        diExcluiRegistro = new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                //Exclui as informações do registro na tabela
+                db.execSQL("delete from usuarios where numreg = " + numreg);
+                CarregaDados();
+                MostraMensagem("Dados excluidos com sucesso!");
+            }
+        };
+
+        btexcluirdados.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if (c.getCount() > 0) {
+
+                    AlertDialog.Builder dialogo = new
+                            AlertDialog.Builder(ExcluirDadosActivity.this);
+                    dialogo.setTitle("Confirma");
+                    dialogo.setMessage("Deseja excluir esse registro ?");
+                    dialogo.setNegativeButton("Não", null);
+                    dialogo.setPositiveButton("Sim", diExcluiRegistro);
+                    dialogo.show();
+                } else {
+                    MostraMensagem("Não existem registros para excluir!");
+                }
+            }
+        });
+
+    } catch(Exception e)
+    {
+            MostraMensagem("Erro: " + e.toString());
+    }
+}
+
+    public void CarregaDados(){
+        c = db.query("usuarios",new String []
+                        {"numreg","nome","telefone","email"},
+                null,null,null,null,null);
+
+        txtnome.setText("");
+        txttelefone.setText("");
+        txtemail.setText("");
+
+        if(c.getCount() > 0) {
+            //Move para o primeiro registro
+            c.moveToFirst();
+            indice = 1;
+            numreg = c.getInt(0);
+            //Obtem o número de registro
+            txtnome.setText(c.getString(1));//Obtem o nome
+            //Obtém o telefone
+            txttelefone.setText(c.getString(2));
+            //Obtém o e-mail
+            txtemail.setText(c.getString(3));
+
+            txtstatus_registro.setText(indice + " / " + c.getCount());
+        }
+        else {
+            txtstatus_registro.setText("Nenhum Registro");
+        }
+    }
+
+    public void MostraMensagem(String str)    {
+        AlertDialog.Builder dialogo = new
+                AlertDialog.Builder(ExcluirDadosActivity.this);
+        dialogo.setTitle("Aviso");
+        dialogo.setMessage(str);
+        dialogo.setNeutralButton("OK", null);
+        dialogo.show();
+    }
+}
+
+	
+activity_excluir_dados2.xml
+
+mesmo código do activity_excluir_dados.xml
+
+ExcluirDados2Activity.java
+
+//import android.content.ContentValues;
+
+Mesmo código do ExcluirDadosActivity, somente alterando o método diExcluiRegistro:
+
+ diExcluiRegistro = new DialogInterface.OnClickListener() { 
+ @Override  public void onClick(DialogInterface dialog, int which) { 
+ db.delete("usuarios","numreg=" + numreg,null);  
+ CarregarDados();   MostraMensagem("Dados excluidos com sucesso");  
+ }   
+ }; 
+
+
+(activity_main.xml)layout novo:
+
+Somente acrescentar o botão:
+
+                    <Button
+                        android:id="@+id/btexcluirdados"
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="15sp"
+                        tools:text="@string/excluir_dados" />
+						
+MainActivity.java
+
+    Button btexcluirdados;
+	
+        btexcluirdados = findViewById(R.id.btexcluirdados);
+
+        btexcluirdados.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent excluirDadosActivity = new Intent(MainActivity.this,
+                        ExcluirDadosActivity.class);
+                MainActivity.this.startActivity(excluirDadosActivity);
+            }
+        });
+
